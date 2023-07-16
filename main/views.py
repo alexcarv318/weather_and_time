@@ -19,7 +19,7 @@ def forecast(request):
     main = weather_forecast_in_my_location(location)
     info = []
     for i in range(0, len(main[0]), 2):
-        temp = f'{int(main[1][i])}°C / {int(main[1][i+1])}°C'
+        temp = f'{int(main[1][i])}°C / {int(main[1][i+1]) + 3}°C'
         dictionary = {'date': main[0][i][:10], 'weather': main[2][i], 'temperature': temp}
         info.append(dictionary)
 
