@@ -18,6 +18,8 @@ $(document).ready(function() {
         video.setAttribute('src', '/static/main/video/rain1080.mp4')
     } else if (weather.innerHTML === 'Sun') {
         video.setAttribute('src', '/static/main/video/sun21080.mp4')
+    } else if (weather.innerHTML === 'Clear') {
+        video.setAttribute('src', '/static/main/video/sun21080.mp4')
     }
 })
 
