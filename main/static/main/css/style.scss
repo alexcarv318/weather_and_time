@@ -1,0 +1,60 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto+Slab&display=swap');
+
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin text($size, $color, $weight, $lheight) {
+    font-size: $size;
+    color: $color;
+    font-weight: $weight;
+    line-height: $lheight;
+}
+
+body {
+    @include size(100%, 100vh);
+    // background: rgb(238,174,202);
+    // background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    font-family: 'Montserrat', sans-serif;
+    overflow-y: hidden;
+}
+
+video {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.clock {
+    position: fixed;
+    margin-top: 200px;
+    margin-left: 250px;
+    h1 {
+        @include text(100px, white, 600, none);
+        margin: 0;
+    }
+    h2 {
+        @include text(80px, white, 600, none);
+        margin: 0;
+        &:last-of-type {
+            margin-bottom: 10px;
+        }
+    }
+    a {
+        @include text(20px, white, 600, none);
+        text-decoration: none;
+        margin-left: 10px;
+    }
+}
+
+

@@ -1,0 +1,100 @@
+@import 'style.css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto+Slab&display=swap');
+
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin text($size, $color, $weight, $lheight) {
+    font-size: $size;
+    color: $color;
+    font-weight: $weight;
+    line-height: $lheight;
+}
+
+.link {
+    @include text(20px, white, 600, none);
+    position: fixed;
+    margin-top: 30px;
+    margin-left: 40px;
+    text-decoration: none
+}
+
+.title {
+    @include text(50px, white, 600, none);
+    position: fixed;
+    margin-left: 40px;
+    top: 10%;
+}
+
+form {
+    @include flex(row, none, none);
+    position: fixed;
+    margin-left: 40px;
+    width: 95%;
+    top: 25%;
+    input {
+        height: 40px;
+        width: 80%;
+        background-color: rgba(235, 236, 242, 80%);
+        border: none;
+        &::placeholder {
+            @include text(20px, rgba(184, 191, 191, 0.6), 300, none);
+            padding-left: 30px;
+        }
+    }
+    button {
+        margin-left: 2%;
+        height: 43px;
+        width: 10%;
+    }
+}
+
+h2 {
+    position: fixed;
+    display: none;
+}
+
+.cards {
+    display: grid;
+    position: fixed;
+    grid-template-columns: repeat(5, 1fr);
+    width: 100%;
+    bottom: 100px;
+
+    .card {
+        @include flex(column, none, center);
+        background-color: rgba(235, 236, 242, 70%);
+        border-radius: 5px;
+        margin: 10%;
+        height: 350px;
+
+        h1 {
+            @include text(none, white, 600, none);
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            margin-top: 40px;
+        }
+
+        .weather-text {
+            display: none;
+        }
+
+        span {
+            @include text(30px, white, 600, none);
+            position: absolute;
+            bottom: 50px;
+        }
+    }
+}

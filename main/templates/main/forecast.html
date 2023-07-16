@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href={% static 'main/css/forecast.css' %}>
+        <script src="{% static 'main/js/jquery-3.6.4.min.js' %}"></script>
+        <script src="{% static 'main/js/forecast.js' %}"></script>
+        <script src="https://kit.fontawesome.com/d074e8ae8c.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <video src="" type="video/mp4" autoplay loop muted id="video"></video>
+        <h2 id="weather">{{weather}}</h2>
+        <a href={% url '' %} class="link"><i class="fa-sharp fa-solid fa-arrow-left" style="color: #ffffff;"></i> GO BACK </a>
+        <h1 class="title">Forecast in your location for the next 5 days</h1>
+        {% comment %} <form method="POST" action="">
+            <label for=""></label>
+            <input name="city" type="text" placeholder="Type city">
+            <button type="Submit" name="submit" value="Submit">Search</button>
+        </form> {% endcomment %}
+        <div class="cards">
+            {% for el in info %}
+                <div class="card">
+                    <h1>{{ el.date }}</h1>
+                    <img class="weather-image" src="">
+                    <span class="weather-text">{{ el.weather }}</span>
+                    <span>{{ el.temperature }}</span>
+                    <span>{{ city }}</span>
+                </div>
+            {% endfor %}
+        </div>
+    </body>
+</html>

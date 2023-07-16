@@ -1,0 +1,144 @@
+@import 'style.css';
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto+Slab&display=swap");
+.link {
+  font-size: 20px;
+  color: white;
+  font-weight: 600;
+  line-height: none;
+  position: fixed;
+  margin-top: 30px;
+  margin-left: 40px;
+  text-decoration: none;
+}
+
+.title {
+  font-size: 50px;
+  color: white;
+  font-weight: 600;
+  line-height: none;
+  position: fixed;
+  margin-left: 40px;
+  top: 10%;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  position: fixed;
+  margin-left: 40px;
+  width: 95%;
+  top: 25%;
+}
+form input {
+  height: 40px;
+  width: 80%;
+  background-color: rgba(235, 236, 242, 0.8);
+  border: none;
+}
+form input::-webkit-input-placeholder {
+  font-size: 20px;
+  color: rgba(184, 191, 191, 0.6);
+  font-weight: 300;
+  line-height: none;
+  padding-left: 30px;
+}
+form input::-moz-placeholder {
+  font-size: 20px;
+  color: rgba(184, 191, 191, 0.6);
+  font-weight: 300;
+  line-height: none;
+  padding-left: 30px;
+}
+form input:-ms-input-placeholder {
+  font-size: 20px;
+  color: rgba(184, 191, 191, 0.6);
+  font-weight: 300;
+  line-height: none;
+  padding-left: 30px;
+}
+form input::-ms-input-placeholder {
+  font-size: 20px;
+  color: rgba(184, 191, 191, 0.6);
+  font-weight: 300;
+  line-height: none;
+  padding-left: 30px;
+}
+form input::placeholder {
+  font-size: 20px;
+  color: rgba(184, 191, 191, 0.6);
+  font-weight: 300;
+  line-height: none;
+  padding-left: 30px;
+}
+form button {
+  margin-left: 2%;
+  height: 43px;
+  width: 10%;
+}
+
+h2 {
+  position: fixed;
+  display: none;
+}
+
+.cards {
+  display: -ms-grid;
+  display: grid;
+  position: fixed;
+  -ms-grid-columns: (1fr)[5];
+  grid-template-columns: repeat(5, 1fr);
+  width: 100%;
+  bottom: 100px;
+}
+.cards .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(235, 236, 242, 0.7);
+  border-radius: 5px;
+  margin: 10%;
+  height: 350px;
+}
+.cards .card h1 {
+  font-size: none;
+  color: white;
+  font-weight: 600;
+  line-height: none;
+}
+.cards .card img {
+  max-width: 100%;
+  max-height: 100%;
+  margin-top: 40px;
+}
+.cards .card .weather-text {
+  display: none;
+}
+.cards .card span {
+  font-size: 30px;
+  color: white;
+  font-weight: 600;
+  line-height: none;
+  position: absolute;
+  bottom: 50px;
+}
