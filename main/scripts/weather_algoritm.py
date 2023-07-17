@@ -5,7 +5,7 @@ import json
 
 data = get_info_by_ip()
 
-APPID = "ed0b3cbd92b3210cf1e0e8a37ebfc4c0" 
+APPID = "secret_key" 
 URL_BASE = "https://api.openweathermap.org/data/2.5/"
 
 
