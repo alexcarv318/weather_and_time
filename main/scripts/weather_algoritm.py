@@ -2,10 +2,14 @@ import requests
 from .what_is_my_ip import *
 import datetime
 import json
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 data = get_info_by_ip()
 
-APPID = "secret_key" 
+APPID = os.getenv('API_KEY')
 URL_BASE = "https://api.openweathermap.org/data/2.5/"
 
 

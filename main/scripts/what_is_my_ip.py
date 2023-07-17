@@ -8,4 +8,4 @@ def get_info_by_ip():
         }
         return data
 
-print(get_info_by_ip())
+#print(get_info_by_ip())
